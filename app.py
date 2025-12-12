@@ -102,6 +102,11 @@ def hint():
     """
     return BASE_HTML_TOP + body + BASE_HTML_BOTTOM
 
+@app.route("/favicon.ico")
+def favicon():
+    # Return a 204 No Content so browsers stop complaining
+    return ("", 204)
+
 
 @app.route("/docs")
 def docs():
